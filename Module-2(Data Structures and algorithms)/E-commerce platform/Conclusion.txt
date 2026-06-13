@@ -1,0 +1,9 @@
+In linear search, every products need to be checked one by one.
+
+Time complexity depends on the number of products which is O(n).
+
+In Binary search, the searching will be reduced by ignoring the unnecessary operations.
+
+Time complexity depends on the half of the input value which is O(log n)
+
+Thus binary search is more suitable for an E-commerce platform. 
