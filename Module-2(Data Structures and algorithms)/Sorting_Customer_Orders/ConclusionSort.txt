@@ -1,0 +1,3 @@
+Quick sort is the preferable one for this case as its time complexity is O(n log n) which means it divides the array into parts and do operations.
+
+The other sorting algorithms may increase the time complexity by increasing the number of  operations. 
