@@ -1,9 +1,0 @@
-The screenshot (UserIntegrationTest.png) contains
-
--UserController
--UnserIntegrationTest 
--ExerciseMockitoDependenciesApplication
-
-as the userService is not visible in the screenshot the file has been uploaded 
-
-also the other files are uploaded for the complete flow.
