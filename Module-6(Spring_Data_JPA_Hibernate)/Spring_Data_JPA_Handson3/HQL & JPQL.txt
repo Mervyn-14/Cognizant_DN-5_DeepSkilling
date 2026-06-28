@@ -1,0 +1,102 @@
+# Introduction to HQL and JPQL
+
+## What is HQL?
+
+From what I understood,
+
+* HQL stands for **Hibernate Query Language**.
+* It is an object-oriented query language provided by Hibernate.
+* HQL is similar to SQL, but instead of table names it uses **Java class names (Entity classes)**.
+* It works only with Hibernate.
+
+### Features
+
+* Uses Entity class names instead of database table names.
+* Uses object properties instead of column names.
+* Supports SELECT, INSERT, UPDATE and DELETE operations.
+* Database independent.
+
+### Example
+
+```java
+String hql = "FROM Country";
+
+List<Country> countries =
+session.createQuery(hql, Country.class).list();
+```
+
+---
+
+# What is JPQL?
+
+From what I understood,
+
+* JPQL stands for **Java Persistence Query Language**.
+* It is a standard query language defined by JPA.
+* JPQL is also object-oriented.
+* It works with any JPA implementation such as Hibernate or EclipseLink.
+
+### Features
+
+* Uses Entity class names.
+* Uses object properties.
+* Supports SELECT, UPDATE and DELETE.
+* Does **not** support INSERT.
+
+### Example
+
+@Query("SELECT c FROM Country c")
+List<Country> getCountries();
+
+# HQL vs SQL
+
+SQL
+
+SELECT * FROM country;
+
+HQL
+
+FROM Country
+
+SQL uses:
+
+* Table names
+* Column names
+
+HQL uses:
+
+* Entity class names
+* Object field names
+
+---
+
+# JPQL vs SQL
+
+SQL
+
+SELECT * FROM country;
+
+JPQL
+SELECT c FROM Country c
+
+
+Again, JPQL works with Entity classes instead of database tables.
+
+---
+
+# Relationship
+
+* Every JPQL query is a valid HQL query.
+* But not every HQL query is a valid JPQL query because HQL supports INSERT.
+
+---
+
+# Conclusion
+
+From this handson, I understood that:
+
+* HQL is Hibernate's query language.
+* JPQL is the standard query language defined by JPA.
+* Both work with Java Entity objects instead of database tables.
+* JPQL is a subset of HQL.
+* HQL supports INSERT, while JPQL does not.
